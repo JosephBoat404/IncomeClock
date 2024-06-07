@@ -1,9 +1,12 @@
-import { Text, View, Image } from "react-native";
-import styles from "../Style/Styling.js";
+import React from "react";
+import { Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { Svg, Path, Text as SvgText } from "react-native-svg";
+import styles from "../Style/Styling.js";
 
 export default function SecondBox() {
-  var date = new Date().getDate();
+  const date = new Date().getDate();
+
   return (
     <View style={[styles.box_2, styles.shadowProp, styles.elevation]}>
       <LinearGradient
@@ -17,40 +20,13 @@ export default function SecondBox() {
         locations={[0.32, 0.86, 1]}
         style={styles.gradientBorder}
       />
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <View style={{ flex: 1, justifyContent: "center", paddingTop: 10 }}>
-          <Text style={[styles.text2, { fontSize: 20, fontFamily: "roboto" }]}>
-            Expected Money
-          </Text>
-          <Text
-            style={[
-              styles.text2,
-              {
-                opacity: 1,
-                lineHeight: 65,
-                fontWeight: "400",
-                fontSize: 45,
-                fontFamily: "roboto",
-              },
-            ]}
-          >
-            $0
-          </Text>
+      <View style={styles.Frontview}>
+        <View style={styles.InsideFrontView}>
+          <Text style={{fontSize:15,textAlign:"center",opacity:0.4}}>Expected Income</Text>
+          <Text style={{fontSize:62,textAlign:"center",fontFamily: 'roboto'}}>$0</Text>
         </View>
-        <View
-          style={{
-            flex: 1,
-            alignItems: "flex-end",
-            justifyContent: "center",
-          }}
-        >
-          <View style={{ position: "relative", width: 150, height: 150 }}>
-            <Image
-              style={{ width: "100%", height: "100%" }}
-              source={require("../assets/calendar-svgrepo-com.png")}
-            />
-            <Text style={[styles.datedisplay]}>{date}</Text>
-          </View>
+        <View style={[styles.InsideFrontViewCal]}>
+          <Text style={{fontSize:62,textAlign:"center",fontFamily: 'roboto'}}>{date}</Text>
         </View>
       </View>
     </View>

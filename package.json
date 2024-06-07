@@ -11,16 +11,19 @@
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",
     "@expo/metro-runtime": "~3.2.1",
-    "expo": "~51.0.8",
+    "@react-navigation/bottom-tabs": "^6.5.20",
+    "@react-navigation/stack": "^6.3.29",
+    "expo": "~51.0.11",
     "expo-app-loading": "^2.1.1",
+    "expo-image": "~1.12.11",
     "expo-linear-gradient": "~13.0.2",
+    "expo-router": "~3.5.15",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.74.1",
-    "react-native-web": "~0.19.10",
+    "react-native": "^0.74.2",
     "react-native-svg": "15.2.0",
-    "expo-image": "~1.12.9"
+    "react-native-web": "~0.19.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

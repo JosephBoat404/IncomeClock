@@ -1,25 +1,16 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
+    marginTop: 20,
     flex: 1,
     backgroundColor: "#EAECEF",
     justifyContent: "center",
     alignItems: "center",
   },
 
-  datedisplay: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: [{ translateX: -29 }, { translateY: -15 }],
-    fontWeight: "400",
-    fontSize: 45,
-    lineHeight: 65,
-  },
   ScheduleEditText: {
     color: "black",
-    fontSize: 30,
+    fontSize: 10,
     fontWeight: "400",
     borderBottomWidth: 1,
     fontSize: 22,
@@ -27,7 +18,6 @@ const styles = StyleSheet.create({
     paddingBottom: 14,
     paddingTop: 14,
     borderColor: "#D1D0D0",
-    fontFamily: "roboto",
   },
   clockbox: {
     flex: 1,
@@ -41,27 +31,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10, 
   },
-
-  text: {
-    color: "black",
-    fontSize: 30,
-  },
-
-  text2: {
-    color: "black",
-    fontSize: 20,
-    textAlign: "left",
-  },
-  box_1: {
-    flex: 0.3,
-    width: "100%",
-    paddingLeft: 15,
-    marginBottom: 20,
-    alignContent: "center",
-    justifyContent: "center",
-    textAlign: "left",
-    backgroundColor: "white",
-  },
+ 
 
   box_2: {
     flex: 0.5,
@@ -85,32 +55,9 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 20,
     marginTop: 20,
+    maxHeight:30000,
     overflow: "hidden",
-  },
-  box_4: {
-    flex: 0.21,
-    flexDirection: "row",
-    width: "100%",
-    bottom: 0,
-    justifyContent: "space-around",
-    alignItems: "center",
-    marginTop: 20,
-    borderColor: "#D1D0D0",
-    backgroundColor: "white",
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
-    borderWidth: 1,
-    borderBottomWidth: 0,
-  },
-
-  input: {
-    margin: 10,
-    height: 40,
-    borderColor: "gray",
-    borderWidth: 1,
-    padding: 10,
-  },
-
+    },
   shadowProp: {
     shadowColor: "black",
     shadowOffset: { width: -2, height: 2 },
@@ -120,7 +67,39 @@ const styles = StyleSheet.create({
   elevation: {
     elevation: 10,
     shadowColor: "black",
+  },centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
   },
+
+  SpaceBetweenTab:{
+    flex:0.28,
+    backgroundColor:'none',
+    width: "100%",
+    opacity:0,
+  },
+
+  Frontview:{
+    flex:1,
+    flexDirection:"row",
+    justifyContent:"space-between",
+    margin:22,
+    
+  },
+
+  InsideFrontView:{
+    width:"45%",
+  },
+
+  InsideFrontViewCal:{
+    borderWidth:2,
+    borderTopWidth:20,
+    width:"45%",
+    borderRadius:20,
+  }
+ 
 });
 
 export default styles;
