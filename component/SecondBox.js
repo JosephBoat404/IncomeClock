@@ -1,11 +1,16 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Svg, Path, Text as SvgText } from "react-native-svg";
 import styles from "../Style/Styling.js";
 
 export default function SecondBox() {
-  const date = new Date().getDate();
+  const date = new Date();
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ];
+  
+  const day = date.getDate();
+  const month = monthNames[date.getMonth()];
 
   return (
     <View style={[styles.box_2, styles.shadowProp, styles.elevation]}>
@@ -26,7 +31,8 @@ export default function SecondBox() {
           <Text style={{fontSize:62,textAlign:"center",fontFamily: 'roboto'}}>$0</Text>
         </View>
         <View style={[styles.InsideFrontViewCal]}>
-          <Text style={{fontSize:62,textAlign:"center",fontFamily: 'roboto'}}>{date}</Text>
+          <Text style={{fontSize:62,textAlign:"center",fontFamily: 'roboto'}}>{day}</Text>
+          {/* <Text style={{fontSize:32,textAlign:"center",fontFamily: 'roboto', fontWeight:"bold"}}>{month}</Text> */}
         </View>
       </View>
     </View>

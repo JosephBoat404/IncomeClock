@@ -7,6 +7,7 @@ import ProfileScreen from "./component/ProfileScreen.js";
 import { useFonts } from "expo-font";
 import { Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { TimeProvider } from "./component/TimeContext.js";
 
 const Tab = createBottomTabNavigator();
 
@@ -28,9 +29,10 @@ export default function App() {
     );
   } else {
     return (
+      <TimeProvider>
       <NavigationContainer>
         <Tab.Navigator
-          screenOptions={({ route, navigation }) => ({
+          screenOptions={({ route }) => ({
             tabBarIcon: ({ color, size }) => {
               let iconName;
 
@@ -93,6 +95,7 @@ export default function App() {
           <Tab.Screen name="Profile" component={ProfileScreen} />
         </Tab.Navigator>
       </NavigationContainer>
+      </TimeProvider>
     );
   }
 }

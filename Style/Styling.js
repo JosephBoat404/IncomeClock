@@ -1,13 +1,33 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     flex: 1,
     backgroundColor: "#EAECEF",
     justifyContent: "center",
     alignItems: "center",
   },
+  Schbox1: {
+    flex: 1,
+    width: "100%",
+    padding: 10,
+    position: "relative",
+    overflow: "hidden",
+    backgroundColor: "#EAECEF",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+  },
 
+  Schbox2: {
+    flex: 1,
+    width: "100%",
+    padding: 10,
+    position: "relative",
+    overflow: "hidden",
+    backgroundColor: "red",
+    alignItems: "center",
+    flexDirection: "column",
+  },
   ScheduleEditText: {
     color: "black",
     fontSize: 10,
@@ -27,16 +47,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     margin: 4,
     marginTop: 10,
-    justifyContent: "space-between", 
+    justifyContent: "space-between",
     alignItems: "center",
-    padding: 10, 
+    padding: 10,
   },
- 
-
   box_2: {
     flex: 0.5,
     width: "95%",
     borderRadius: 20,
+    marginTop: 20,
     padding: 10,
     position: "relative",
     overflow: "hidden",
@@ -55,9 +74,9 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 20,
     marginTop: 20,
-    maxHeight:30000,
+    maxHeight: 30000,
     overflow: "hidden",
-    },
+  },
   shadowProp: {
     shadowColor: "black",
     shadowOffset: { width: -2, height: 2 },
@@ -67,39 +86,38 @@ const styles = StyleSheet.create({
   elevation: {
     elevation: 10,
     shadowColor: "black",
-  },centeredView: {
+  },
+  centeredView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 22,
   },
 
-  SpaceBetweenTab:{
-    flex:0.28,
-    backgroundColor:'none',
+  SpaceBetweenTab: {
+    flex: 0.28,
+    backgroundColor: "none",
     width: "100%",
-    opacity:0,
+    opacity: 0,
   },
 
-  Frontview:{
-    flex:1,
-    flexDirection:"row",
-    justifyContent:"space-between",
-    margin:22,
-    
+  Frontview: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    margin: 22,
   },
 
-  InsideFrontView:{
-    width:"45%",
+  InsideFrontView: {
+    width: "45%",
   },
 
-  InsideFrontViewCal:{
-    borderWidth:2,
-    borderTopWidth:20,
-    width:"45%",
-    borderRadius:20,
-  }
- 
+  InsideFrontViewCal: {
+    borderWidth: 2,
+    borderTopWidth: 20,
+    width: "45%",
+    borderRadius: 12,
+  },
 });
 
 export default styles;
